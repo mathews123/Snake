@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Snake Game</title>
+    <style>
+        body {
+          padding: 25px;
+          background-color: white;
+          color: black;
+          font-size: 25px;
+        }
+        .dark-mode {
+          background-color: black;
+          color: rgb(44, 139, 44);
+        }
+        .light-mode {
+          background-color: white;
+          color: black
+        }
+      </style>
+    </head>
+    <body>
+      <h3 id="DarkModetext">Modo escuro está desligado.</h3>
+      <button class="button-on-click" onclick="darkMode()">Modo Escuro.</button>
+      <button class="button-on-click"onclick="lightMode()">Modo Claro.</button>
+      <script>
+        function darkMode() {
+          var element = document.body;
+          var content = document.getElementById("DarkModetext");
+          element.className = "dark-mode";
+          content.innerText = "Modo escuro está Ligado.";
+        }
+        function lightMode() {
+          var element = document.body;
+          var content = document.getElementById("DarkModetext");
+          element.className = "light-mode";
+          content.innerText = "Modo escuro está desligado.";
+        }
+      </script>
+
+<body>
+    <h1>SNAKE GAME!</h1>
+    <canvas id="snake" width="512" height="512"></canvas>
+</body>
+</html>
